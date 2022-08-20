@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[12,30,50]
+        function fn(x,y){
+            console.log(this);
+            console.log(x+y);
+        }
+        // apply 可以调用函数,可以改变this的指向 里面2个参数第一个是指向哪里  第二个是函数中的实参只不过要写成数组形式的 
+        fn.apply(arr,[100,200])
+        //使用场景 求数组的最大值
+        //这里的this指向的是null就是空 也可以写成Math
+        let max=Math.max.apply(null,arr)
+        console.log(max);
+        //这是通过展开运算符求最大值
+        let mx=Math.max(...arr)
+        console.log(mx);
+    </script>
+</body>
+</html>

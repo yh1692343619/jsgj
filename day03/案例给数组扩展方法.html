@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //给数组扩展求最大值方法
+        // let arr=[1,5,8,9]
+        // //不能使用箭头函数
+        // Array.prototype.max=function(){
+        //     return Math.max(...this)
+        // }
+        
+        // console.log(arr.max());//9
+
+        //求和方法
+        let arr=[1,2,3]
+        Array.prototype.sum=function(){
+          return  this.reduce((prve,item)=>prve+item,0)
+        }
+        console.log([1,1,1].sum());//3
+        console.log([12,12,12].sum());//36
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //闭包的主要作用或者使用场景就是   外层可以使用 内层函数的变量
+        // function fn(){
+        //     let a=1200
+        //     function fu1(){
+        //         console.log(a);
+        //     }
+        //     return fu1
+        // }
+        // // 现在fn()就等于fn1
+        // // fn()===function fu1(){
+        // //         console.log(a);
+        // //     }
+        // let  fun= fn()
+        // //外层想要使用
+        // fun()
+        // 写法2
+        // function fn(){
+        //     let a=12000
+        //     return function(){
+        //         console.log(a);
+        //     }
+        // }
+        // // 现在fn()就等于fn1
+        // // fn()===function fu1(){
+        // //         console.log(a);
+        // //     }
+        // let  fun= fn()
+        // //外层想要使用
+        // fun()
+        //写法3
+        // function fn(){
+        //     let a=1200
+        //     return function(){
+        //         return a
+        //     }
+        // }
+        // //声明一个外部函数
+        // let num=fn()
+        // // 调用这个声明的外部函数
+        // console.log(num());
+//--------------------------------------------------------------------------
+
+
+        // 下面这种方式来查看被调用啦多少次是不行的  因为当i被重新赋值后 就会打乱顺序   所以要使用闭包的方式才能实现不会被别人定义的同名变量打乱执行的顺序
+        // let i=0
+        // function fn(){
+        //     i++
+        //     console.log(i);
+        // }
+        // fn()
+        // fn()
+        // fn()
+        // fn()
+        // i=100
+        // fn()
+        // fn()
+        
+        //闭包实现
+        function fn (){
+            let i=0;
+           return function(){
+            i++
+            console.log(i);
+           }
+        }
+       let fun= fn()
+        console.log(fun());
+        console.log(fun());
+        console.log(fun());
+        console.log(fun());
+        i=100
+        console.log(fun());
+        console.log(fun());
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Preson={
+            yanjing:2,
+            bizi:1,
+            zuiba:1,
+        }
+        function Man(){
+
+        }
+        // constructor // kang s zhua ke ter
+        //Man构造函数想要继承preson对象中的属性，需要把preson对象添加到Man构造函数的原型对象上
+        Man.prototype=Preson
+        //这样实现后有个缺点，就是prototype上的constructor属性没了 这样就指不回构造函数啦  所以要重新让他指回去
+        Man.prototype.constructor=Man
+        let dd= new Man()
+        console.log(dd);
+    </script>
+</body>
+</html>

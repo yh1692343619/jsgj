@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //split('分隔符')方法 就是将字符串转换为数组 ()里的是分隔符
+        // //和join()方法 正好相反
+        // let str='2022-7-23'
+        // let arr=str.split('-')
+        // console.log(arr);
+        // //substring(开始的索引号[,结束的索引号]) 方法截取字符串   ()中2个参数  第一个为从哪开始第二个参数不写就是截取到最后  第二个参数如果写 截取到的位置就是不包含想要截取的部分
+        let str1='地址：011100x'
+        let arr1=str1.substring(3,10)
+        console.log(arr1);//011100x
+
+        // startsWith(检测字符串,[,检测位置索引号]) 方法 用来检测是否以某个字符开头
+        // var str = "To be, or not to be, that is the question.";
+        // console.log(str.startsWith('To be')); true
+        // console.log(str.startsWith('Tobe')); false
+        // console.log(str.startsWith('or not',7)); true
+
+        //includes(搜索的字符串,[,检测位置索引号])方法 判断一个字符串是否包含在另一个字符串中根据情况返回true和false
+        //就是查找又没有这个字符  区分大小写
+        // let str = 'To be, or not to be, that is the question.';
+        // console.log(str.includes('To be'));//ture
+        // console.log(str.includes('nonexistent')); // false
+        // console.log(str.includes('To be', 1));    // false
+        // console.log(str.includes('TO BE'));       // false
+    </script>
+</body>
+</html>

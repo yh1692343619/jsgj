@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //find方法 精确查找 使用场景：我可以从很多的数据里面找我想要的那条数据
+        // find(function(item){})
+    //     let arr=[
+    //         {
+    //             name:'小米',
+    //             price:1999
+    //         },
+    //         {
+    //             name:'华为',
+    //             price:4222
+    //         }
+    //     ]
+    //   let xm=  arr.find(item=>item.name==='小米')
+    //   console.log(xm);
+    //筛选只要有一个不符合就会返回false 否则就是true
+    let arr=[10,20,30]
+   let eve =arr.every(item=>item>=10)
+        console.log(eve);//true
+   //   some方法
+        //筛选只有有一个符合就会返回true  否则加上false
+    let a=arr.some(item=>item>=40)
+    console.log(a);
+    //join方法  把数组根据分割符转换为字符串 不会改变原数组
+    console.log(arr.join('/'));
+    
+    </script>
+    
+</body>
+</html>

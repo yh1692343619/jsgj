@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-数组解构----------------------------------------
+        // let pc=['海尔','联想','小米','方正']
+        // let [hr,lx,xm,fz]=pc
+        // console.log(hr);
+        // console.log(lx);
+        // console.log(xm);
+        // console.log(fz);
+
+        //普通方式函数来实现
+        // function getValue(){
+        //     return [100,60]
+        // }
+        // getValue()
+        // ;[max,min]=getValue()
+        // console.log(max,min);
+
+        // //箭头函数的方式来实现
+        // let fn=()=>[100,60]
+        // let [max,min]=fn()
+        // console.log(max,min);
+
+        // 对象解构------------------------------------------------
+        // let pig={name:'佩奇',age:6}
+        // let {name,age}=pig
+        // console.log(name,age);
+
+        // 这个是给对象解构改名
+        // let pig={name:'佩奇',age:6}
+        // let {name:uname,age}=pig
+        // console.log(uname,age);
+        //数组对象的结构
+        let goods=[{goodsName:'小米',price:19999}]
+        let [{goodsName,price}]=goods
+        console.log(goodsName,price);
+    </script>
+</body>
+</html>

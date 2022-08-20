@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj={
+            name:'李磊',
+            age:18,
+            fm:{baby:'杜yirui'}
+        }
+        console.log(obj);
+        let o={...obj}
+        o.age=20
+        o.fm.baby='沫沫'
+        console.log(o);
+        //浅拷贝只能拷贝基础数据类型 拷贝不了引用数据类型 因为拷贝引用数据类型的时候是地址而不是值
+    </script>
+</body>
+</html>

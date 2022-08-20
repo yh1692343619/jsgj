@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(){
+            this.yan=2
+            this.bizi=1
+            this.er=2
+            this.tou=1
+        }
+        //需求让Man来继承Person内的属性
+        function Man(){}
+        //父类  子类
+        //子类.原型对象=父类 
+        Man.prototype=new Person()
+        Man.prototype.zui=function(){'动一动'}
+        Man.prototype.construcsor=Man
+        console.log(new Man()); 
+        
+        
+        function Woman(){}
+        Woman.prototype= new Person()
+        Woman.prototype.construcsor=Woman
+        console.log(new Woman());
+    </script>
+</body>
+</html>

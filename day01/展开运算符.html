@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[1,2,3]
+        //...arr  在数组中叫展开运算符 在函数里叫剩余参数 
+        //...arr  在数组中最大的作用就是可以取最大小值 或者合并数组‘
+        //求最大小值
+        //因为math.max 不能直接取数组的最大值  所以要配合着展开运算符来写
+        console.log(Math.max(...arr1)); 
+        console.log(Math.min(...arr1));
+        //求和
+        let arr2=[3,4,5]
+        let  arr = [...arr1 , ...arr2]
+        console.log(arr);
+    </script>
+</body>
+</html>

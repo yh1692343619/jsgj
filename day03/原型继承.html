@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Preson={
+            yanjing:2,
+            bizi:1,
+            zuiba:1
+        }
+        function Man(){
+
+        }
+        //这样的话是采取覆盖的形式 constructor属性就会没了 没了就指不回构造函数啦
+        Man.prototype=Preson
+        //所以再指回原来的构造函数
+        Man.prototype.constructor=Man
+        let hh=new Man()
+        console.log(hh)
+    </script>
+</body>
+</html>

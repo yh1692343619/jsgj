@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let o={name:'pink',age:18,sex:'男'}
+        //获取对象全部的属性名   得到的是数组
+        console.log(Object.keys(o))//['name','age','sex']
+        console.log(Object.values(o))//['pink',18,'男']
+
+
+        //用内置静态方法把一个对象赋值给另一个对象
+        let chengshi_2={name:'pink',age:18,sex:'男'}
+        let chengshi_1={}        
+        Object.assign(chengshi_1,o)
+        console.log(chengshi_1);
+        //经常使用的场景给对象添加属性
+        Object.assign(chengshi_2,{dizhi:'北京市'})
+        console.log(chengshi_2);
+
+    </script>
+</body>
+</html>
